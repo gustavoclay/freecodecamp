@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Survey Form</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <h1 id="title">CADASTRO</h1>
+<p id="description">Preencha o formulário e realize seu cadastro.</p>
+<div id="form-outer">
+  <form action="" id="survey-form" method="GET">
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="name" id="name-label">Nome: </label>
+      </div>
+    
+    <div class="rightTab">
+      <input autofocus type="text" id="name" name="name" class="input-field" placeholder="Digite o seu Nome Completo" required>
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="email" id="email-label">Email: </label>
+      </div>
+    
+     <div class="rightTab">
+       <input type="email" id="email" name="email" class="input-field" required placeholder="Digite seu email">
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="age" id="number-label">Idade: </label>
+      </div>
+    
+     <div class="rightTab">
+       <input type="number" id="number" name="age" min="1" max="125" class="input-field" required placeholder="Digite sua Idade">
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="sexo" id="dropdown-label">Sexo: </label>
+      </div>
+    
+     <div class="rightTab">
+       <select name="sexo" class="dropdown" id="dropdown">
+       <option disable value>Selecione uma opção</option>
+       <option value="masculino">Masculino</option>
+       <option value="feminino">Feminino</option>
+       </select>
+     </div>
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="userType">Tipo:</label>
+      </div>
+    
+    <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Aluno<input name="radio-buttons" value="1"  type="radio" class="userType" ></label></li>
+          <li class="radio"><label>Professor<input name="radio-buttons" value="2"  type="radio" class="userType" ></label></li>
+          <li class="radio"><label>Funcionário<input name="radio-buttons" value="1"  type="radio" class="userType" ></label></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="resources">Recursos:</label>
+      </div>
+      <div class="rightTab">
+        <ul id="resources" style="list-style: none;">
+          <li class="checkbox"><label><input name="resources" value="1" type="checkbox" class="userTypes">Financeiro</label></li>
+          <li class="checkbox"><label><input name="resources" value="2" type="checkbox" class="userTypes">Acadêmico</label></li>
+          <li class="checkbox"><label><input name="resources" value="3" type="checkbox" class="userTypes">Tutor</label></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments" id="comments-label">Observação:</label>
+      </div>
+    
+     <div class="rightTab">
+       <textarea id="comments" name="comment" class="input-field" placeholder="Comentários" style="height: 50px; resize: vertical;"></textarea>
+    </div>  
+    
+    <button id="submit" type="Submit">Enviar</button>
+    
+  </form>
+</div>
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+  
+
+</body>
+
+</html>
