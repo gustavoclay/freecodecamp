@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Technical Documentation Page</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <nav id="navbar">
+  <header>React - Getting Started</header>
+  <ul> 
+    <a class="nav-link" href="#Getting_Started" rel="internal"><li>Getting Started</li></a>
+    <a class="nav-link" href="#Try_React" rel="internal"><li>Try React</li></a>
+    <a class="nav-link" href="#Add_React_to_a_Website" rel="internal"><li>Add React to a Website</li></a>
+    <a class="nav-link" href="#Create_a_New_React_App" rel="internal"><li>Create a New React App</li></a>
+    <a class="nav-link" href="#Learn_React" rel="internal"><li>Learn React</li></a>
+    <a class="nav-link" href="#First_Examples" rel="internal"><li>First Examples</li></a>
+    <a class="nav-link" href="#React_for_Designers" rel="internal"><li>React for Designers</li></a>
+    <a class="nav-link" href="#JavaScript_Resources" rel="internal"><li>JavaScript Resources</li></a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Getting_Started">
+    <header>Getting Started</header>
+    <p>This page is an overview of the React documentation and related resources.</p>
+    <p><b>React</b> is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.</p>
+    <ul>
+      <li>Try React</li>
+      <li>Learn React</li>
+      <li>Staying Informed</li>
+      <li>Versioned Documentation</li>
+      <li>Something Missing?</li>
+    </ul>
+  </section>
+  <section class="main-section" id="Try_React">
+    <header>Try React</header>
+    <article>  
+      <p>React has been designed from the start for gradual adoption, and <b>you can use as little or as much React as you need.</b> Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.</p>
+      </artice>
+    </section>
+  <section class="main-section" id="Add_React_to_a_Website">
+    <header>Add React to a Website</header>
+    <article>
+      <p>You can add React to an HTML page in one minute. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.</p>
+     <p>
+       React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Perhaps you only want to add some “sprinkles of interactivity” to an existing page. React components are a great way to do that.
+      </p>
+      <p>
+        The majority of websites aren’t, and don’t need to be, single-page apps. With a few lines of code and no build tooling, try React in a small part of your website. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+      </p>
+      <ul>
+        <a href="#add_react_1_min" rel="internal"><li>Add React in One Minute</li></a>
+        <a href="#try_react_jsx" rel="internal"><li>Optional: Try React with JSX</li></a>
+      </ul>
+      
+      <h2 id="add_react_1_min">Add React in One Minute</h2>
+      <p>
+        In this section, we will show how to add a React component to an existing HTML page. You can follow along with your own website, or create an empty HTML file to practice.
+      </p>
+      <p>There will be no complicated tools or install requirements — to complete this section, you only need an internet connection, and a minute of your time.</p>
+      <h1>Step 1: Add a DOM Container to the HTML</h1>
+      <p>First, open the HTML page you want to edit. Add an empty &lt;div&gt; tag to mark the spot where you want to display something with React. For example:
+      </p>
+      <code>
+&lt;!-- ... existing HTML ... --&gt;
+
+&lt;div id="like_button_container"&gt;&lt;/div&gt;
+
+&lt;!-- ... existing HTML ... --&gt;
+      </code>
+      <p>
+        We gave this &lt;div&gt; a unique id HTML attribute. This will allow us to find it from the JavaScript code later and display a React component inside of it.
+      </p>
+      
+      <h1>Step 2: Add the Script Tags</h1>
+      <p>Next, add three &lt;script&gt; tags to the HTML page right before the closing &lt;/body&gt; tag:
+      </p>
+      <code>
+&lt;!-- ... other HTML ... --&gt;
+        
+&lt;!-- Load React. --&gt;
+
+&lt;!-- Note: when deploying, replace "development.js" with "production.min.js". --&gt;
+
+  &lt;script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin&gt;&lt;/script&gt;
+  &lt;script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin&gt;&lt;/script&gt;
+
+  &lt;!-- Load our React component. --&gt;
+  &lt;script src="like_button.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+      
+      </code>
+      <p>
+        The first two tags load React. The third one will load your component code.
+      </p>
+      
+      <h1>Step 3: Create a React Component</h1>
+      <p>
+        Create a file called like_button.js next to your HTML page
+      </p>
+      <p>
+        Open this starter code and paste it into the file you created.
+      </p>
+      <p>After the starter code, add two lines to the bottom of like_button.js:</p>
+      <code>
+// ... the starter code you pasted ...
+
+const domContainer = document.querySelector('#like_button_container');
+ReactDOM.render(e(LikeButton), domContainer);
+
+      </code>
+      <p>
+        These two lines of code find the &lt;div&gt; we added to our HTML in the first step, and then display our “Like” button React component inside of it.
+      </p>
+      
+      <h2 id="try_react_jsx">Optional: Try React with JSX</h2>
+      <p>
+        In the examples above, we only relied on features that are natively supported by the browsers. This is why we used a JavaScript function call to tell React what to display:
+      </p>
+      <code>
+
+const e = React.createElement;
+
+// Display a "Like" &lt;button&gt;
+return e(
+  'button',
+  { onClick: () => this.setState({ liked: true }) },
+  'Like'
+);
+
+      </code>
+      <p>
+        However, React also offers an option to use JSX instead:
+      </p>
+      <code>
+
+// Display a "Like" &lt;button&gt;
+return (
+  &lt;button onClick={() =&gt; this.setState({ liked: true })}&gt;
+    Like
+  &lt;/button&gt;
+);
+
+      </code>
+      <p>
+        These two code snippets are equivalent. While JSX is completely optional, many people find it helpful for writing UI code — both with React and with other libraries.
+      </p>
+      
+      <p>You can play with JSX using this online converter</p>
+      
+      </artice>
+    </section>
+  <section class="main-section" id="Create_a_New_React_App">
+    <header>Create a New React App</header>
+    <article>
+    <p>When starting a React project, a simple HTML page with script tags might still be the best option. It only takes a minute to set up!</p>
+
+<p>As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Learn_React">
+    <header>Learn React</header>
+    <article> 
+      <p>
+        People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you’ll find this section helpful.
+      </p>
+      <li>
+        If you prefer to learn by doing, start with our practical tutorial.
+      </li>
+      <li>If you prefer to learn concepts step by step, start with our guide to main concepts.</li>
+      <p>
+        Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you will get the hang of it.
+      </p>
+    </article>
+    </section>
+  <section class="main-section" id="First_Examples">
+    <header>First Examples</header>
+    <p>
+The React homepage contains a few small React examples with a live editor. Even if you don’t know anything about React yet, try changing their code and see how it affects the result.
+    </p>
+    
+    </section>
+  <section class="main-section" id="React_for_Designers">
+    <header>React for Designers</header>
+    <article>
+      <p>
+        If you’re coming from a design background, these resources are a great place to get started.
+      </p>
+    </article>
+    </section>
+  <section class="main-section" id="JavaScript_Resources">
+    <header>JavaScript Resources</header>
+    <article>
+     <p> The React documentation assumes some familiarity with programming in the JavaScript language. You don’t have to be an expert, but it’s harder to learn both React and JavaScript at the same time.</p>
+
+<p>We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.</p>
+      </article>
+    </section>
+</main>
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
